@@ -25,7 +25,9 @@ const Profile = () => {
         </CardHeader>
         <CardContent className="flex items-center flex-col justify-center">
           <div className="flex flex-col gap-3">
-            <InputComponent
+            <Input
+              type="text"
+              required
               placeholder="Name"
               onChange={(event) =>
                 setProfile({ ...profile, name: event.target.value })
@@ -54,11 +56,99 @@ const Profile = () => {
                 setProfile({ ...profile, years: event.target.value })
               }
             />
+            <Input
+              required
+              type="text"
+              placeholder="Gender"
+              onChange={(event) =>
+                setProfile({ ...profile, gender: event.target.value })
+              }
+            />
+            <Input 
+              required
+              type="text"
+              placeholder="Religion"
+              onChange={(event) =>
+                setProfile({ ...profile, religion: event.target.value })
+              }
+            />
+            <Input 
+              required
+              type="text"
+              placeholder="Community/Category"
+              onChange={(event) =>
+                setProfile({ ...profile, CommunityCategory: event.target.value })
+              }
+            />
+            <Input 
+              required
+              type="text"
+              placeholder="Fathers Name"
+              onChange={(event) =>
+                setProfile({ ...profile, father: event.target.value })
+              }
+            />
+            <Input 
+              required
+              type="text"
+              placeholder="Mothers Name"
+              onChange={(event) =>
+                setProfile({ ...profile, mother: event.target.value })
+              }
+            />
+            <Input 
+              required
+              type="text"
+              placeholder="Guardian Name"
+              onChange={(event) =>
+                setProfile({ ...profile, guardian: event.target.value })
+              }
+            />
+            <Input 
+              required
+              type="text"
+              placeholder="Aadhar Number"
+              onChange={(event) =>
+                setProfile({ ...profile, aadhar: event.target.value })
+              }
+            />
+            <Input 
+              required
+              type="tel"
+              placeholder="Phone Number"
+              onChange={(event) =>
+                setProfile({ ...profile, phno: event.target.value })
+              }
+            />
+            <Input 
+              required
+              type="text"
+              placeholder="Dayscholar/Hosteller"
+              onChange={(event) =>
+                setProfile({ ...profile, dayscholarhostel: event.target.value })
+              }
+            />
+            <Input 
+              required
+              type="text"
+              placeholder="Address"
+              onChange={(event) =>
+                setProfile({ ...profile, address: event.target.value })
+              }
+            />
+            <Input 
+              required
+              type="text"
+              placeholder="Pincode"
+              onChange={(event) =>
+                setProfile({ ...profile, pincode: event.target.value })
+              }
+            />
           </div>
         </CardContent>
         <CardFooter className="flex justify-center">
           <Button size="sm" variant="secondary" className="bg-green-800">
-            <Link to="/profile/syllabus">Submit</Link>
+            <Link to="/profile/syllabus">Next</Link>
           </Button>
         </CardFooter>
       </Card>
