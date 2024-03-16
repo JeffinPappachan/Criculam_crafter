@@ -1,9 +1,9 @@
 import { Outlet, Link } from "react-router-dom";
-import { Heading1 } from "../components/heading1";
 import { Button } from "@/components/ui/button";
-
 import { DataContext } from "../context/DataContext";
 import { useContext, useEffect, useState } from "react";
+import { ModeToggle } from "@/components/mode-toggle";
+import { Label } from "@/components/ui/label";
 
 interface Profile {
   name: string;
@@ -12,7 +12,10 @@ interface Profile {
 }
 
 const Layout = () => {
-  const { profile, setProfile } = useContext(DataContext) as { profile: Profile, setProfile: React.Dispatch<React.SetStateAction<Profile>> };
+  const { profile, setProfile } = useContext(DataContext) as {
+    profile: Profile;
+    setProfile: React.Dispatch<React.SetStateAction<Profile>>;
+  };
 
   useEffect(() => {
     if (profile.name !== "" && profile.college !== "" && profile.years !== "") {
@@ -23,42 +26,33 @@ const Layout = () => {
   const [show, setShow] = useState(false);
 
   return (
-    <div>
-      <div>
-        <div>
-          <Heading1 />
-          <div>
-            <Button>
-              <Link style={styles.link} to="/">
-                Home
-              </Link>
+    <div className="w-full flex flex-col items-center justify-center">
+      <nav className="flex w-screen items-center justify-between sticky z-10 top-0 border-2 border-b-2 border-b-primary bg-secondary rounded-3xl p-5">
+        <Label className="sm:text-base md:text-lg lg:text-xl">
+          Syllabus Generator
+        </Label>
+        <div className="flex justify-evenly gap-5">
+          <Button size="sm">
+            <Link to="/">Home</Link>
+          </Button>
+          <Button size="sm">
+            <Link to="profile">Profile</Link>
+          </Button>
+          {show && (
+            <Button size="sm">
+              <Link to="/profile/syllabus">Syllabus</Link>
             </Button>
-            <Button>
-              <Link style={styles.link} to="profile">
-                Profile
-              </Link>
-            </Button>
-            {show && (
-              <Button>
-                <Link style={styles.link} to="/profile/syllabus">
-                  Syllabus
-                </Link>
-              </Button>
-            )}
-            <Button>
-              <Link style={styles.link} to="overview">
-                Overview
-              </Link>
-            </Button>
-            <Button>
-              <Link style={styles.link} to="contact">
-                Contact
-              </Link>
-            </Button>
-          </div>
+          )}
+          <Button size="sm">
+            <Link to="overview">Overview</Link>
+          </Button>
+          <Button size="sm">
+            <Link to="contact">Contact</Link>
+          </Button>
+          <ModeToggle />
         </div>
-        <Outlet />
-      </div>
+      </nav>
+      <Outlet />
     </div>
   );
 };
@@ -66,9 +60,6 @@ const Layout = () => {
 export default Layout;
 
 const styles = {
-  link: {
-    color: "white",
-  },
   nav: {
     position: "sticky",
     top: "0",
@@ -80,4 +71,3 @@ const styles = {
     borderRadius: "0.5rem",
   },
 };
-
