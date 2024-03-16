@@ -58,16 +58,3 @@ const Layout = () => {
 };
 
 export default Layout;
-
-const styles = {
-  nav: {
-    position: "sticky",
-    top: "0",
-    backgroundColor: "darkslategray",
-    zIndex: "100",
-    borderBottom: "1px solid #eaeaea",
-    padding: "1rem",
-    width: "100%",
-    borderRadius: "0.5rem",
-  },
-};
