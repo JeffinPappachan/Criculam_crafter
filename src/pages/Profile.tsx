@@ -39,7 +39,13 @@ const Profile = () => {
                 setProfile({ ...profile, college: event.target.value })
               }
             />
-            <InputComponent type="date" placeholder="DOB" onChange={(event) => setProfile( ...profile, dob: event.target.value)} />
+            <input
+              type="date"
+              className="p-2 rounded-md border-1 border-primary bg-background focus:outline-none focus:ring-2 focus:ring-primary"
+              onChange={(event) =>
+                setProfile({ ...profile, dob: event.target.value })
+              }
+            />
             <Input
               required
               type="text"

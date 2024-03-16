@@ -1,7 +1,7 @@
 import { Input } from "./ui/input";
 
-export const InputComponent = ({ type = "text", placeholder, onChange }) => {
+export const InputComponent = ({ data = "text", placeholder, onChange }) => {
   return (
-    <Input required type={type} placeholder={placeholder} onChange={onChange} />
+    <Input required type={data} placeholder={placeholder} onChange={onChange} />
   );
 };
