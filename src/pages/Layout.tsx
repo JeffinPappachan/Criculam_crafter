@@ -33,21 +33,31 @@ const Layout = () => {
         </Label>
         <div className="flex justify-evenly gap-5">
           <Button size="sm">
-            <Link to="/">Home</Link>
+            <Link to="/">
+              <Label className="font-extrabold">Home</Label>
+            </Link>
           </Button>
           <Button size="sm">
-            <Link to="profile">Profile</Link>
+            <Link to="profile">
+              <Label className="font-extrabold">Profile</Label>
+            </Link>
           </Button>
           {show && (
             <Button size="sm">
-              <Link to="/profile/syllabus">Syllabus</Link>
+              <Link to="/profile/syllabus">
+                <Label className="font-extrabold">Syllabus</Label>
+              </Link>
             </Button>
           )}
           <Button size="sm">
-            <Link to="overview">Overview</Link>
+            <Link to="overview">
+              <Label className="font-extrabold">Overview</Label>
+            </Link>
           </Button>
           <Button size="sm">
-            <Link to="contact">Contact</Link>
+            <Link to="contact">
+              <Label className="font-extrabold">Contact</Label>
+            </Link>
           </Button>
           <ModeToggle />
         </div>
@@ -58,16 +68,3 @@ const Layout = () => {
 };
 
 export default Layout;
-
-const styles = {
-  nav: {
-    position: "sticky",
-    top: "0",
-    backgroundColor: "darkslategray",
-    zIndex: "100",
-    borderBottom: "1px solid #eaeaea",
-    padding: "1rem",
-    width: "100%",
-    borderRadius: "0.5rem",
-  },
-};
