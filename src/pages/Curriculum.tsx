@@ -13,7 +13,7 @@ import {
 } from "@/components/ui/card";
 import { InputComponent } from "@/components/InputComponent";
 
-const Academicdeatils = () => {
+const Curriculamdetails = () => {
   const { profile, setProfile } = useContext(DataContext);
   return (
     <div className="w-screen p-20 flex flex-col items-center justify-center">
@@ -131,7 +131,7 @@ const Academicdeatils = () => {
         </CardContent>
         <CardFooter className="flex justify-center">
           <Button size="sm" variant="secondary" className="bg-green-800">
-            <Link to="src\pages\Curriculum.tsx">Next</Link>
+            <Link to="/profile/syllabus">Next</Link>
           </Button>
         </CardFooter>
       </Card>
@@ -140,4 +140,4 @@ const Academicdeatils = () => {
 };
 // Import the Syllabus component
 
-export default Academicdeatils;
+export default Curriculamdetails;

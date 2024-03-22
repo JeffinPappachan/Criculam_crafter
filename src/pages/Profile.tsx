@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { DataContext } from "../context/DataContext";
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import {
@@ -16,6 +16,9 @@ import { InputComponent } from "@/components/InputComponent";
 const Profile = () => {
   const { profile, setProfile } = useContext(DataContext);
   console.log(profile);
+
+ 
+
   return (
     <div className="w-screen p-20 flex flex-col items-center justify-center">
       <Card className="p-10 w-[90%] max-w-[500px]">
@@ -31,6 +34,7 @@ const Profile = () => {
               placeholder="Name"
               onChange={(event) =>
                 setProfile({ ...profile, name: event.target.value })
+                  
               }
             />
             <Input
@@ -64,7 +68,7 @@ const Profile = () => {
                 setProfile({ ...profile, gender: event.target.value })
               }
             />
-            <Input 
+            <Input
               required
               type="text"
               placeholder="Religion"
@@ -72,15 +76,18 @@ const Profile = () => {
                 setProfile({ ...profile, religion: event.target.value })
               }
             />
-            <Input 
+            <Input
               required
               type="text"
               placeholder="Community/Category"
               onChange={(event) =>
-                setProfile({ ...profile, CommunityCategory: event.target.value })
+                setProfile({
+                  ...profile,
+                  CommunityCategory: event.target.value,
+                })
               }
             />
-            <Input 
+            <Input
               required
               type="text"
               placeholder="Fathers Name"
@@ -88,7 +95,7 @@ const Profile = () => {
                 setProfile({ ...profile, father: event.target.value })
               }
             />
-            <Input 
+            <Input
               required
               type="text"
               placeholder="Mothers Name"
@@ -96,7 +103,7 @@ const Profile = () => {
                 setProfile({ ...profile, mother: event.target.value })
               }
             />
-            <Input 
+            <Input
               required
               type="text"
               placeholder="Guardian Name"
@@ -104,7 +111,7 @@ const Profile = () => {
                 setProfile({ ...profile, guardian: event.target.value })
               }
             />
-            <Input 
+            <Input
               required
               type="text"
               placeholder="Aadhar Number"
@@ -112,7 +119,7 @@ const Profile = () => {
                 setProfile({ ...profile, aadhar: event.target.value })
               }
             />
-            <Input 
+            <Input
               required
               type="tel"
               placeholder="Phone Number"
@@ -120,7 +127,7 @@ const Profile = () => {
                 setProfile({ ...profile, phno: event.target.value })
               }
             />
-            <Input 
+            <Input
               required
               type="text"
               placeholder="Dayscholar/Hosteller"
@@ -128,7 +135,7 @@ const Profile = () => {
                 setProfile({ ...profile, dayscholarhostel: event.target.value })
               }
             />
-            <Input 
+            <Input
               required
               type="text"
               placeholder="Address"
@@ -136,7 +143,7 @@ const Profile = () => {
                 setProfile({ ...profile, address: event.target.value })
               }
             />
-            <Input 
+            <Input
               required
               type="text"
               placeholder="Pincode"
@@ -155,4 +162,4 @@ const Profile = () => {
     </div>
   );
 };
-export default Profile;
+export default Profile; 
