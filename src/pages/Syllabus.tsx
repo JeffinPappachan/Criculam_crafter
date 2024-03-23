@@ -131,7 +131,7 @@ const Academicdeatils = () => {
         </CardContent>
         <CardFooter className="flex justify-center">
           <Button size="sm" variant="secondary" className="bg-green-800">
-            <Link to="src\pages\Curriculum.tsx">Next</Link>
+            <Link to="/profile/syllabus/curriculum">Next</Link>
           </Button>
         </CardFooter>
       </Card>
