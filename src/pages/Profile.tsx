@@ -17,8 +17,6 @@ const Profile = () => {
   const { profile, setProfile } = useContext(DataContext);
   console.log(profile);
 
- 
-
   return (
     <div className="w-screen p-20 flex flex-col items-center justify-center">
       <Card className="p-10 w-[90%] max-w-[500px]">
@@ -34,7 +32,6 @@ const Profile = () => {
               placeholder="Name"
               onChange={(event) =>
                 setProfile({ ...profile, name: event.target.value })
-                  
               }
             />
             <Input
@@ -57,7 +54,7 @@ const Profile = () => {
               type="text"
               placeholder="Email"
               onChange={(event) =>
-                setProfile({ ...profile, years: event.target.value })
+                setProfile({ ...profile, email: event.target.value })
               }
             />
             <Input
@@ -162,4 +159,4 @@ const Profile = () => {
     </div>
   );
 };
-export default Profile; 
+export default Profile;

@@ -1,4 +1,6 @@
 import React from "react";
+import { DataContext } from "../context/DataContext";
+import { useContext } from "react";
 import {
   Select,
   SelectContent,
@@ -10,18 +12,22 @@ import {
 } from "@/components/ui/select";
 
 export function CourseSelect() {
+  const { profile, setProfile } = useContext(DataContext);
+  const handleSelectChange = (event) => {
+    setProfile({ ...profile, years: event.target.value });
+  };
   return (
-    <Select>
+    <Select onChange={handleSelectChange}>
       <SelectTrigger className="w-[180px]">
         <SelectValue placeholder="Number of years" />
       </SelectTrigger>
       <SelectContent>
         <SelectGroup>
-          <SelectLabel>Years</SelectLabel>
+          <SelectLabel>--Choose an option--</SelectLabel>
           <SelectItem value="3">3</SelectItem>
           <SelectItem value="4">4</SelectItem>
         </SelectGroup>
       </SelectContent>
-    </Select>
+    </Select> // Add closing tag for Select element
   );
 }
