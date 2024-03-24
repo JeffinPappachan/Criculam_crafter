@@ -12,9 +12,11 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import { InputComponent } from "@/components/InputComponent";
+import { CourseSelect } from "@/components/Courseselect";
 
 const Academicdeatils = () => {
   const { profile, setProfile } = useContext(DataContext);
+  const semesters = profile.years * 2;
   return (
     <div className="w-screen p-20 flex flex-col items-center justify-center">
       <Card className="p-10 w-[90%] max-w-[500px]">
@@ -127,6 +129,15 @@ const Academicdeatils = () => {
                 })
               }
             />
+            <Input disabled type="text" placeholder="MG University" />
+            <Input
+              disabled
+              type="text"
+              placeholder="Bharata Mata College,Thrikkakara"
+            />
+            <CourseSelect />
+
+            {/* <Input disabled type="text" value={`Semesters: ${semesters}`} /> */}
           </div>
         </CardContent>
         <CardFooter className="flex justify-center">

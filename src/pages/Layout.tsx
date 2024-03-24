@@ -42,13 +42,7 @@ const Layout = () => {
               <Label className="font-extrabold">Profile</Label>
             </Link>
           </Button>
-          {show && (
-            <Button size="sm">
-              <Link to="/profile/syllabus">
-                <Label className="font-extrabold">Syllabus</Label>
-              </Link>
-            </Button>
-          )}
+          
           <Button size="sm">
             <Link to="overview">
               <Label className="font-extrabold">Overview</Label>

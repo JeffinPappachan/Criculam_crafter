@@ -13,13 +13,13 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import { InputComponent } from "@/components/InputComponent";
-import { CourseSelect } from "@/components/Courseselect"; // Import the CourseSelect component
+// Import the CourseSelect component
 import { Label } from "@/components/ui/label";
 import { Weight } from "lucide-react";
+import { Subjectselection } from "@/components/Subjectselection";
 const Curriculum = () => {
   const { profile, setProfile } = useContext(DataContext);
   // const [years, setYears] = useState(0);
-  const semesters = profile.years * 2;
 
   return (
     <div className="w-screen p-20 flex flex-col items-center justify-center">
@@ -44,15 +44,6 @@ const Curriculum = () => {
               }
             /> */}
 
-            <Input disabled type="text" placeholder="MG University" />
-            <Input
-              disabled
-              type="text"
-              placeholder="Bharata Mata College,Thrikkakara"
-            />
-            <CourseSelect />
-
-            <Input disabled type="text" value={`Semesters: ${semesters}`} />
             <Card
               style={{
                 background: "rgba(255, 255, 255, 0.1)",
@@ -66,15 +57,176 @@ const Curriculum = () => {
                 First Semester
               </CardDescription>
               <Label htmlFor="course1">Course-1</Label>
-              <Input disabled type="text" placeholder="course-1" />
+              <Subjectselection />
               <Label htmlFor="course2">Course-2</Label>
-              <Input disabled type="text" placeholder="course-2" />
+              <Subjectselection />
               <Label htmlFor="course3">Course-3</Label>
-              <Input disabled type="text" placeholder="course-3" />
+              <Subjectselection />
               <Label htmlFor="course4">Course-4</Label>
-              <Input disabled type="text" placeholder="course-4" />
+              <Subjectselection />
               <Label htmlFor="course5">Course-5</Label>
-              <Input disabled type="text" placeholder="course-5" />
+              <Subjectselection />
+            </Card>
+            <Card
+              style={{
+                background: "rgba(255, 255, 255, 0.1)",
+                backdropFilter: "blur(10px)",
+                borderRadius: "10px",
+                border: "1px solid rgba(255, 255, 255, 0.2)",
+                padding: "40px",
+              }}
+            >
+              <CardDescription style={{ fontWeight: "bold" }}>
+                Second Semester
+              </CardDescription>
+              <Label htmlFor="course1">Course-1</Label>
+              <Subjectselection />
+              <Label htmlFor="course2">Course-2</Label>
+              <Subjectselection />
+              <Label htmlFor="course3">Course-3</Label>
+              <Subjectselection />
+              <Label htmlFor="course4">Course-4</Label>
+              <Subjectselection />
+              <Label htmlFor="course5">Course-5</Label>
+              <Subjectselection />
+            </Card>
+            <Card
+              style={{
+                background: "rgba(255, 255, 255, 0.1)",
+                backdropFilter: "blur(10px)",
+                borderRadius: "10px",
+                border: "1px solid rgba(255, 255, 255, 0.2)",
+                padding: "40px",
+              }}
+            >
+              <CardDescription style={{ fontWeight: "bold" }}>
+                Third Semester
+              </CardDescription>
+              <Label htmlFor="course1">Course-1</Label>
+              <Subjectselection />
+              <Label htmlFor="course2">Course-2</Label>
+              <Subjectselection />
+              <Label htmlFor="course3">Course-3</Label>
+              <Subjectselection />
+              <Label htmlFor="course4">Course-4</Label>
+              <Subjectselection />
+              <Label htmlFor="course5">Course-5</Label>
+              <Subjectselection />
+            </Card>
+            <Card
+              style={{
+                background: "rgba(255, 255, 255, 0.1)",
+                backdropFilter: "blur(10px)",
+                borderRadius: "10px",
+                border: "1px solid rgba(255, 255, 255, 0.2)",
+                padding: "40px",
+              }}
+            >
+              <CardDescription style={{ fontWeight: "bold" }}>
+                Fourth Semester
+              </CardDescription>
+              <Label htmlFor="course1">Course-1</Label>
+              <Subjectselection />
+              <Label htmlFor="course2">Course-2</Label>
+              <Subjectselection />
+              <Label htmlFor="course3">Course-3</Label>
+              <Subjectselection />
+              <Label htmlFor="course4">Course-4</Label>
+              <Subjectselection />
+              <Label htmlFor="course5">Course-5</Label>
+              <Subjectselection />
+            </Card>
+            <Card
+              style={{
+                background: "rgba(255, 255, 255, 0.1)",
+                backdropFilter: "blur(10px)",
+                borderRadius: "10px",
+                border: "1px solid rgba(255, 255, 255, 0.2)",
+                padding: "40px",
+              }}
+            >
+              <CardDescription style={{ fontWeight: "bold" }}>
+                Fifth Semester
+              </CardDescription>
+              <Label htmlFor="course1">Course-1</Label>
+              <Subjectselection />
+              <Label htmlFor="course2">Course-2</Label>
+              <Subjectselection />
+              <Label htmlFor="course3">Course-3</Label>
+              <Subjectselection />
+              <Label htmlFor="course4">Course-4</Label>
+              <Subjectselection />
+              <Label htmlFor="course5">Course-5</Label>
+              <Subjectselection />
+            </Card>
+            <Card
+              style={{
+                background: "rgba(255, 255, 255, 0.1)",
+                backdropFilter: "blur(10px)",
+                borderRadius: "10px",
+                border: "1px solid rgba(255, 255, 255, 0.2)",
+                padding: "40px",
+              }}
+            >
+              <CardDescription style={{ fontWeight: "bold" }}>
+                Sixth Semester
+              </CardDescription>
+              <Label htmlFor="course1">Course-1</Label>
+              <Subjectselection />
+              <Label htmlFor="course2">Course-2</Label>
+              <Subjectselection />
+              <Label htmlFor="course3">Course-3</Label>
+              <Subjectselection />
+              <Label htmlFor="course4">Course-4</Label>
+              <Subjectselection />
+              <Label htmlFor="course5">Course-5</Label>
+              <Subjectselection />
+            </Card>
+            <Card
+              style={{
+                background: "rgba(255, 255, 255, 0.1)",
+                backdropFilter: "blur(10px)",
+                borderRadius: "10px",
+                border: "1px solid rgba(255, 255, 255, 0.2)",
+                padding: "40px",
+              }}
+            >
+              <CardDescription style={{ fontWeight: "bold" }}>
+                Seventh Semester
+              </CardDescription>
+              <Label htmlFor="course1">Course-1</Label>
+              <Subjectselection />
+              <Label htmlFor="course2">Course-2</Label>
+              <Subjectselection />
+              <Label htmlFor="course3">Course-3</Label>
+              <Subjectselection />
+              <Label htmlFor="course4">Course-4</Label>
+              <Subjectselection />
+              <Label htmlFor="course5">Course-5</Label>
+              <Subjectselection />
+            </Card>
+            <Card
+              style={{
+                background: "rgba(255, 255, 255, 0.1)",
+                backdropFilter: "blur(10px)",
+                borderRadius: "10px",
+                border: "1px solid rgba(255, 255, 255, 0.2)",
+                padding: "40px",
+              }}
+            >
+              <CardDescription style={{ fontWeight: "bold" }}>
+                Eight Semester
+              </CardDescription>
+              <Label htmlFor="course1">Course-1</Label>
+              <Subjectselection />
+              <Label htmlFor="course2">Course-2</Label>
+              <Subjectselection />
+              <Label htmlFor="course3">Course-3</Label>
+              <Subjectselection />
+              <Label htmlFor="course4">Course-4</Label>
+              <Subjectselection />
+              <Label htmlFor="course5">Course-5</Label>
+              <Subjectselection />
             </Card>
           </div>
         </CardContent>
